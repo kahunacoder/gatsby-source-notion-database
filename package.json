@@ -1,10 +1,10 @@
 {
-  "name": "@conradlin/gatsby-source-notion-database",
+  "name": "@kahunacoder/gatsby-source-notion-database",
   "version": "0.7.5",
   "description": "Load data from Notion's database",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\""
   },
   "repository": {
     "type": "git",
