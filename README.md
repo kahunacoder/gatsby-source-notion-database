@@ -5,5 +5,5 @@
 ## Install
 
 ```
-npm install @conradlin/gatsby-source-notion-database
+npm install @kahunacoder/gatsby-source-notion-database
 ```
