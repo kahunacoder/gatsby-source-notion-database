@@ -23,5 +23,8 @@
   },
   "devDependencies": {
     "mkdirp": "^0.5.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
