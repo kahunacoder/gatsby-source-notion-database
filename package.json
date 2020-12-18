@@ -26,6 +26,6 @@
   },
   "publishConfig": {
     "access": "public",
-    "registry": "https://registry.npmjs.org/@kahunacoder/gatsby-source-notion-database"
+    "registry": "https://registry.npmjs.org"
   }
 }
