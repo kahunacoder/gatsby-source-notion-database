@@ -6,7 +6,7 @@ const limit = pLimit(5);
 
 const cachePathName = 'public/.notion'
 
-function updateCacheData(item) {
+function updateCacheData (item) {
     let data = {
         last_edited_time: item.last_edited_time,
         html: item.html
@@ -22,7 +22,7 @@ function updateCacheData(item) {
     }
 }
 
-function getCachedData(item) {
+function getCachedData (item) {
     if (!fs.existsSync(cachePathName)) {
         mkdirp(cachePathName)
     }
@@ -42,7 +42,7 @@ function getCachedData(item) {
     }
 }
 
-async function genApiData(nb, collection, tableName, key, createNode, createNodeId, createContentDigest, cacheTable) {
+async function genApiData (nb, collection, tableName, key, createNode, createNodeId, createContentDigest, cacheTable) {
     console.log(`🌈fetch data from notion: ${tableName}`)
     let props = collection.props.filter(i => !(i === '_raw'))
     await Promise.all(collection.rows.filter(i => i).map(itemData => limit(async () => {
@@ -80,6 +80,7 @@ async function genApiData(nb, collection, tableName, key, createNode, createNode
                         data.html = html
                         updateCacheData(data)
                     } catch (error) {
+                        console.log(error)
                         data.html = `fetch error`
                         console.log(`failed to fetch html of ${tableName} - ${itemData.id}`)
                     }
